@@ -1,0 +1,19 @@
+<html>
+<body>
+
+        <div class="header">
+          <a href="#default" class="logo">Nature School</a>
+          <div class="header-right">
+            <button class="btn-info btn btn-space" routerLink ='/'>Home</button>
+            <button  *ngIf="!acToken ; else tokehAVE" class="btn-primary btn btn-space" routerLink ='/login' >Login</button>
+            <ng-template #tokehAVE>
+            <button (click)="logOut()" class="btn-primary btn btn-space" >Logout</button>
+            </ng-template>
+            <button routerLink="/signup" class="btn-success btn btn-space">SignUp</button>
+          </div>
+        </div>
+        
+        <router-outlet></router-outlet>
+   
+        </body>
+        </html>

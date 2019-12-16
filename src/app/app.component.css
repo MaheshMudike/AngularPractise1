@@ -1,0 +1,9 @@
+.tp-card {
+    max-width: 400px;
+ }
+ .tp-header-image {
+    background-image: url('https://www.tutorialspoint.com/materialize/src/html5-mini-logo.jpg');
+    background-size: cover;
+ }
+ * {box-sizing: border-box;}
+

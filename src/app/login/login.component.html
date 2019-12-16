@@ -1,0 +1,60 @@
+
+<html>
+
+    <body>
+        <header>
+            <app-top-header></app-top-header>          
+        </header>&nbsp;&nbsp;&nbsp;
+        <h4 class="text-center">Nature School Managments</h4>
+    
+      <section>
+        <nav>
+    
+          <button type="button" class="btn-info btn btn-space" routerLink='/' routerLinkActive="active">Our School</button><br>
+    
+          <hr>
+    
+          <button type="button" class="btn-info btn btn-space" routerLink="/totalStudents" routerLinkActive="active">Total Students</button><br>
+    
+          <hr>
+    
+          <button type="button" class="btn-info btn btn-space" routerLink="/addStudents" routerLinkActive="active">Add Stuednts Profile</button><br>
+    
+          <hr>
+    
+          <button type="button" class="btn-info btn btn-space" routerLink="/feestructure" routerLinkActive="active">Fee Structure</button>
+    
+    
+        </nav>
+      </section>
+    
+      <div class="container">
+      <form  [formGroup]="loginform" (ngSubmit)="sendlogindata()">
+        <h6 class="text-center">Login</h6>
+        <div class="row">
+          <div class="col-12">
+            <input type="text" name="username" placeholder="Username"  formControlName="userName" required>
+            <input type="password" name="password" placeholder="Password" formControlName="password" required>
+            <input type="submit" value="Login">
+          </div>
+          
+        </div>
+      </form>
+      <div class="row">
+        <div class="col">
+          <a href="#" style="color:blue" routerLink="/signup"  class="btn">Sign up</a>
+        </div>
+        <div class="col">
+          <a href="#" style="color:blue" class="btn">Forgot password?</a>
+        </div>
+      </div>
+    </div>  
+    
+    <footer class =" footer ">
+      <p>Footer</p>
+    </footer>
+    
+    </body>
+    
+    </html>
+

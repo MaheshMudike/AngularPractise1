@@ -1,0 +1,72 @@
+<html>
+
+<body>
+    <header>
+        <app-top-header></app-top-header>          
+    </header>&nbsp;&nbsp;&nbsp;
+    <h4 class="text-center">Nature School Managments</h4>
+<div>
+  <section>
+    <nav>
+
+      <button type="button" class="btn-info btn btn-space " routerLink='/' routerLinkActive="active">Our
+        School</button><br>
+
+      <hr>
+
+      <button type="button" class="btn-info btn btn-space" routerLink="/totalStudents" routerLinkActive="active">Total
+        Students</button><br>
+
+      <hr>
+
+      <button type="button" class="btn-info btn btn-space" routerLink="/addStudents" routerLinkActive="active">Add
+        Stuednts Profile</button><br>
+
+      <hr>
+
+      <button type="button" class="btn-info btn btn-space" routerLink="/feestructure" routerLinkActive="active">Fee
+        Structure</button>
+
+
+    </nav>
+    <div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <h2>Add Students Data</h2>
+    </div>
+
+    <form [formGroup]="StudentProfileForm" (ngSubmit)="sendtudentDetails()">
+     <label>
+        Name:
+        <input type="text"  class ="form-control  text-center" formControlName="Name"><br>
+      </label>
+      &nbsp;&nbsp;&nbsp;<label>
+        Class:
+        <input type="text"  class ="form-control  text-center" formControlName="CLass"><br>
+      </label><br>
+     <label>
+        RollNo:
+        <input type="text" class ="form-control  text-center" formControlName="Roll"><br>
+      </label>
+      &nbsp;&nbsp;&nbsp; <label>
+        Rank:
+        <input type="text"  class ="form-control text-center " formControlName="Rank"><br>
+      </label><br>
+      <div class = "col-8">
+      <button type="submit" class="btn-primary btn btn-space col-3"  >Add</button>
+    </div>
+    </form>
+  </section>
+</div>
+
+<div class=col-12>
+    <footer class="footer">
+        <p>Footer</p>
+      </footer>
+    
+</div>
+   
+
+  
+</body>
+
+</html>
