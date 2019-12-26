@@ -15,7 +15,7 @@ export class GetdatanodesqlService {
       'Content-Type': 'application/json',
     })
   }
-    return  this.http.get("http://10.80.0.51:8080/getStudents");
+    return  this.http.get("http://10.80.15.93:8080/getStudents");
   }
   addData(data){
     const httpOptions = {
@@ -23,7 +23,7 @@ export class GetdatanodesqlService {
       'Content-Type': 'application/json',
     })
   }
-    return  this.http.post("http://10.80.0.51:8080/addStudents" ,data,httpOptions);
+    return  this.http.post("http://10.80.15.93:8080/addStudents" ,data,httpOptions);
   }
   deleteData(data){
     console.log(data)
@@ -32,8 +32,9 @@ export class GetdatanodesqlService {
       'Content-Type': 'application/json',
       'responseType': 'text' 
     })
+  
   } 
-    return  this.http.get(`http://10.80.0.51:8080/deleteStudents/?id=${data}` ,);
+    return  this.http.get(`http://10.80.15.93:8080/deleteStudents?id=${data}`);
   }
 }
 //   authenticateData(data){

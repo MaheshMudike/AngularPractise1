@@ -8,7 +8,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(data): Observable<boolean> {
-    return this.http.post<{token: string}>('http://10.80.0.51:8080/login', {username: data.userName, password: data.password})
+    return this.http.post<{token: string}>('http://10.80.15.93:8080/login', {username: data.userName, password: data.password})
       .pipe(
         map(result => {
             console.log(result)
@@ -20,6 +20,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('access_token');
+    window.location.reload();
   }
 
   public get loggedIn(): boolean {

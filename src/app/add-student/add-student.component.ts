@@ -9,10 +9,9 @@ import { __core_private_testing_placeholder__ } from '@angular/core/testing';
   styleUrls: ['./add-student.component.css']
 })
 export class AddStudentComponent implements OnInit {
- ;
  StudentProfileForm: FormGroup;
+ data;
   constructor(private fb: FormBuilder,private dataservice : GetdatanodesqlService) { }
-
   ngOnInit() {
     this. addDetailsForm()
   }
@@ -37,8 +36,7 @@ console.log(this.StudentProfileForm.value);
 if(this.StudentProfileForm.valid){
   this.dataservice.addData(this.StudentProfileForm.value).subscribe(res=>{
     console.log(res)
-    console.log("submitted");
-    window.alert("You'r Student Record is submitted");
+  window.alert("You'r Student Record is submitted");
   })
 }
 }
