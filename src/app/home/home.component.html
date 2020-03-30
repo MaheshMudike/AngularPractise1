@@ -5,38 +5,64 @@
     <app-top-header></app-top-header>
   </header>&nbsp;&nbsp;&nbsp;
   <h4 class="text-center">Nature School Managments</h4>
-  <section class=col-12>
-    <div class="col-6">
-      <nav>
-
-        <button type="button" class="btn-info btn btn-space " routerLink='/' routerLinkActive="active">Our
-          School</button><br>
-
-        <hr>
-
-        <button type="button" class="btn-info btn btn-space" routerLink="/totalStudents" routerLinkActive="active">Total
-          Students</button><br>
-
-        <hr>
-
-        <button type="button" class="btn-info btn btn-space" routerLink="/addStudents" routerLinkActive="active">Add
-          Stuednts Profile</button><br>
-
-        <hr>
-
-        <button type="button" class="btn-info btn btn-space" routerLink="/feestructure" routerLinkActive="active">Fee
-          Structure</button>
-
-
-      </nav>
-    </div>
+      <nav class = "col-12">
+        <span class = "alignleft">
+          <button  type="button" class="btn-info btn btn-space " routerLink='/' routerLinkActive="active">Our School</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+          <button  type="button" class="btn-info btn btn-space" routerLink="/totalStudents" routerLinkActive="active">Total Students</button><br>
+        </span>
+        <span class = "alignright">
+          <button  type="button" class="btn-info btn btn-space" routerLink="/addStudents" routerLinkActive="active">Add Stuednts Profile</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+          <button   type="button" class="btn-info btn btn-space" routerLink="/feestructure" routerLinkActive="active">Fee Structure</button>
+        </span>
+    </nav>
+    <ngb-carousel *ngIf="images" class = "col-12">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class ="carousel-inner" [src]="images[0]" alt="Random first slide" style= "width:100%; height: 500px !important;">
+        </div>
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class ="carousel-inner"[src]="images[1]" alt="Random second slide" style= "width:100%; height: 500px !important;">
+        </div>
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class ="carousel-inner" [src]="images[2]" alt="Random third slide" style= "width:100%; height: 500px !important;">
+        </div>
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img class ="carousel-inner" [src]="images[3]" alt="Random third slide" style= "width:100%; height: 500px !important;">
+        </div>
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
     <!-- <div  routerLink="/login" class="btn-success btn btn-space ">
         Login Here
       </div> &nbsp;&nbsp;&nbsp;
       <div  routerLink="/signup"  class="btn-success btn btn-space ">
         signUp Here
       </div> &nbsp;&nbsp;&nbsp; -->
-
+      <section>
     <div class=" col-mid-6">
       <h3 class="text-center text-info">About Our SChool .</h3>&nbsp;&nbsp;&nbsp;
 

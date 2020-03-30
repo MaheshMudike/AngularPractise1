@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Subscriber } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,15 @@ export class GetdatanodesqlService {
       'Content-Type': 'application/json',
     })
   }
-    return  this.http.get("http://10.80.15.93:8080/getStudents");
+    return  this.http.get(`${environment.Node_API}/getStudents`);
+  }
+  getDataId(id){
+    const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    })
+  }
+    return  this.http.get(`${environment.Node_API}/getStudentsofRank/${id}`);
   }
   addData(data){
     const httpOptions = {
@@ -23,7 +32,7 @@ export class GetdatanodesqlService {
       'Content-Type': 'application/json',
     })
   }
-    return  this.http.post("http://10.80.15.93:8080/addStudents" ,data,httpOptions);
+    return  this.http.post(`${environment.Node_API}/addStudents` , data, httpOptions);
   }
   deleteData(data){
     console.log(data)
@@ -34,7 +43,7 @@ export class GetdatanodesqlService {
     })
   
   } 
-    return  this.http.get(`http://10.80.15.93:8080/deleteStudents?id=${data}`);
+    return  this.http.get(`${environment.Node_API}/deleteStudents?id=${data}`);
   }
 }
 //   authenticateData(data){

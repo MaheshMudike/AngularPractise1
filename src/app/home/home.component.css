@@ -94,4 +94,9 @@
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
   }
-  
+  .alignleft {
+    float: left;
+  }
+  .alignright {
+    float: right;
+  }

@@ -8,14 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   acToken ;
-  title = 'AngularPractise';
-  constructor(){
-    
+  title = 'Nature School';
+  constructor() {
+
   }
-  ngOnInit(){
-    console.log("cameee111111")
-  
+  ngOnInit() {
+    console.log('cameee111111');
+
   }
-  
+
 }
 

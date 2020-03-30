@@ -5,46 +5,45 @@
     <app-top-header></app-top-header>
   </header>&nbsp;&nbsp;&nbsp;
   <h4 class="text-center">Nature School Managments</h4>
-  <section>
-    <nav>
-
-      <button type="button" class="btn-info btn btn-space" routerLink='/' routerLinkActive="active">Our
-        School</button><br>
-
-      <hr>
-
-      <button type="button" class="btn-info btn btn-space" routerLink="/totalStudents" routerLinkActive="active">Total
-        Students</button><br>
-
-      <hr>
-
-      <button type="button" class="btn-info btn btn-space" routerLink="/addStudents" routerLinkActive="active">Add
-        Stuednts Profile</button><br>
-
-      <hr>
-
-      <button type="button" class="btn-info btn btn-space" routerLink="/feestructure" routerLinkActive="active">Fee
-        Structure</button>
-
-
-    </nav>
+  <section >
+    <app-navigator></app-navigator>
     <div>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <h2>Add Students fee</h2>
+      <h2 class = 'text-center'> Students Fees Details</h2>
     </div>
+<hr>
+    <table class = "text-center"  align="center" style="width:70%">
+      <tr>
+        <th>Class</th>
+        <th>Fees</th>
+        <th>Books</th>
+        <th>Culture Activities</th>
+        <th>Total Fees/Year</th>
+      
+      </tr>
+    
+      <tr *ngFor ="let fees of totalfEES">
+        <td>{{fees.class}}</td>
+        <td>{{fees.Fees}}</td>
+        <td>{{fees.Books}}</td>
+        <td>{{fees.culActivties}}</td>
+        <td>{{fees.Fees + fees.Books + fees.culActivties }} INR</td>
+        <!-- <td><button type=button class="btn btn-info btnblock" (click)="navigatetoAdd(student.Rank)" title="update" >Update
+        </button>&nbsp;&nbsp;<button type=button class="btn btn-danger btnblock" 
+         (click) = "deletedata(student)" title="delete"> Delete</button> </td> -->
+      </tr>
+    </table>
+<hr>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+    ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+<hr>
   </section>
 
-  <!-- <mat-card class=' card-container-left recruiter-box '>
-          <img class =text-left src="https://material.angular.io/assets/img/examples/shiba2.jpg" width="100" height="100"alt="Recruiter">
-          <h1 class='h1title text-capitalize text-center' title='Name'>
-            <b>Name</b> <br> 
-            <b>class</b> <br>
-            <b>roll</b> <br>
-            <b>rank</b>
-          </h1>
-        </mat-card> -->
-
-  <footer>
+  <footer class="footer">
     <p>Footer</p>
   </footer>
 

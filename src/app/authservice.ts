@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(data): Observable<boolean> {
-    return this.http.post<{token: string}>('http://10.80.15.93:8080/login', {username: data.userName, password: data.password})
+    return this.http.post<{token: string}>(`${environment.Node_API}/login`, {username: data.userName, password: data.password})
       .pipe(
         map(result => {
             console.log(result)

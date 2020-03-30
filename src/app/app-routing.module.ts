@@ -10,13 +10,13 @@ import { AuthGuard } from './authguard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'totalStudents', component: ViewDataNodesqlComponent,canActivate: [AuthGuard] },
-  { path: 'addStudents', component: AddStudentComponent ,canActivate: [AuthGuard]},
-  { path: 'feestructure', component: FeeStructureComponent ,canActivate: [AuthGuard] },
+  { path: 'totalStudents', component: ViewDataNodesqlComponent, canActivate: [AuthGuard] },
+  { path: 'addStudents', component: AddStudentComponent , canActivate: [AuthGuard]},
+  { path: 'feestructure', component: FeeStructureComponent , canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: RegstrationComponent }
-  
-]
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

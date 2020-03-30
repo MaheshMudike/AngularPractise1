@@ -8,24 +8,8 @@
         <h4 class="text-center">Nature School Managments</h4>
     
       <section>
-        <nav>
-    
-          <button type="button" class="btn-info btn btn-space " routerLink='/' routerLinkActive="active">Our School</button><br>
-    
-          <hr>
-    
-          <button type="button" class="btn-info btn btn-space" routerLink="/totalStudents" routerLinkActive="active">Total Students</button><br>
-    
-          <hr>
-    
-          <button type="button" class="btn-info btn btn-space" routerLink="/addStudents" routerLinkActive="active">Add Stuednts Profile</button><br>
-    
-          <hr>
-    
-          <button type="button" class="btn-info btn btn-space" routerLink="/feestructure" routerLinkActive="active">Fee Structure</button>
-    
-    
-        </nav> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <app-navigator></app-navigator>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <h2>Students Profile</h2>
@@ -43,7 +27,7 @@
               <td>{{student.CLass}}</td>
               <td>{{student.Roll}}</td>
               <td>{{student.Rank}}</td>
-              <td><button type=button class="btn btn-info btnblock" title="update" >Update
+              <td><button type=button class="btn btn-info btnblock" (click)="navigatetoAdd(student.Rank)" title="update" >Update
               </button>&nbsp;&nbsp;<button type=button class="btn btn-danger btnblock" 
                (click) = "deletedata(student)" title="delete"> Delete</button> </td>
             </tr>

@@ -18,7 +18,8 @@ import { AuthInterceptor } from './auth.inteceptors';
 import { AuthGuard } from './authguard';
 import { AuthService } from './authservice';
 import { TopHeaderComponent } from './top-header/top-header.component';
-
+import { NavigatorComponent } from './navigator/navigator.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { TopHeaderComponent } from './top-header/top-header.component';
     FeeStructureComponent,
     LoginComponent,
     RegstrationComponent,
-    TopHeaderComponent
+    NavigatorComponent,
+    TopHeaderComponent,
+    NavigatorComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { TopHeaderComponent } from './top-header/top-header.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    NgbModule,
     MatCardModule, MatButtonModule,
     
    //MatCardModule,

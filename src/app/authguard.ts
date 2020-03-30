@@ -6,9 +6,9 @@
 //   { path: 'users', component: UserListComponent, canActivate: [AuthGuard] },
 //   { path: 'login', component: LoginComponent},
   // ...
-//Finally, update client/src/app/auth.guard.ts with the following contents:
+// Finally, update client/src/app/auth.guard.ts with the following contents:
 
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 @Injectable()
